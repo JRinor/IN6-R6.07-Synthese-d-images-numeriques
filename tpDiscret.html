@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head><title>Even TP Discr&eacute;tisation</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  </head>
+  <body bgcolor="#BEFEDE" text="#000000" style="font-family:verdana">
+    <h2>IN6 - Canevas du TP sur la dicr&eacute;tisation de segments droits</h2>
+
+<!--
+    <b>Avertissement</b><br>
+      <dl>
+       <dd> Ce TP doit &ecirc;tre fait sur un ordinateur de la salle de TP,
+          y-compris le compte-rendu. </dd>
+       <dd> Les machines personnelles ne sont pas autoris&eacute;es. </dd>
+       <dd> Les t&eacute;l&eacute;phones portables doivent &ecirc;tre
+          &eacute;teints et rang&eacute;s. </dd>
+       <dd> Aucun acc&egrave;s internet n'est autoris&eacute; durant le
+          TP sauf l'acc&egrave;s &agrave; l'espace num&eacute;rique de
+          travail pour r&eacute;cup&eacute;rer la trame du TP et les
+          diaporamas du cours en d&eacute;but de TP et d&eacute;poser le
+          devoir en fin de TP. </dd>
+       <dd> Ce TP est un travail personnel, les communications entre
+          &eacute;tudiants ne sont pas autoris&eacute;es et les postes
+          de travail doivent &ecirc;tre s&eacute;par&eacute;s d'au moins
+          un m&egrave;tre. </dd>
+       <dd> Toute d&eacute;rogation devra faire l'objet d'une autorisation
+          par l'enseignant. </dd>
+       <dd> Toute infraction de ces r&egrave;gles entra&icirc;nera
+          automatiquement une note de 0. </dd>
+      </dl>
+-->
+
+    <b>1ere partie : Trac&eacute; &eacute;quilibr&eacute; </b>
+      <p> Compiler et ex&eacute;cuter le fichier <tt>Trace.java</tt>. <br>
+        Choisir deux pixels dans la grille &agrave; l'aide de la souris.
+        Un troisi&egrave;me clic est sens&eacute; d&eacute;clencher le
+        trac&eacute; du segment joignant les deux points. Ce trac&eacute;
+        est pour l'instant inop&eacute;rant. <br>
+        Implanter l'algorithme de trac&eacute; arithm&eacute;tique
+        pr&eacute;sent&eacute; en cours dans la m&eacute;thode
+        <tt>tracerSegment</tt> du fichier <tt>Pixel.java</tt>.
+        </p>
+      <dl>
+        <dt> Le code pourra &ecirc;tre test&eacute; avec la classe
+           <tt>Test</tt>. </dt>
+        <dd> En bleu, les pixels justes. </dd>
+        <dd> En jaune, les pixels oubli&eacute;s. </dd>
+        <dd> En vert, les pixels faux. </dd>
+        <dd> En rouge, les pixels trac&eacute; plusieurs fois. </dd>
+        <dd> Taper 1, 2, 3 ou 4 pour quelques cas standard (non exhaustifs). </dd>
+      </dl>
+
+
+    <b>2eme partie : Trac&eacute;s bas&eacute;s r&eacute;gion </b>
+      <dl>
+        <dt> Implanter les algorithmes de trac&eacute; correspondant dans la
+          m&eacute;thode <tt>tracerSegment </tt> avec un param&egrave;tre
+          d'&eacute;quilibrage dans <tt>Pixel.java</tt>. </dt>
+        <dd> La touche <tt>'r'</tt> force les trac&eacute;s en
+          discr&eacute;tisation bas&eacute;e r&eacute;gion sup&eacute;rieure.
+          Le param&egrave;tre <tt>eq</tt> de <tt>tracerSegment</tt> a la
+          valeur <tt>+1</tt>. </dd>
+        <dd> La touche <tt>'z'</tt> force les trac&eacute;s en
+          discr&eacute;tisation bas&eacute;e r&eacute;gion inf&eacute;rieure.
+          Le param&egrave;tre <tt>eq</tt> de <tt>tracerSegment</tt> a la
+          valeur <tt>-1</tt>. </dd>
+        <dd> La touche <tt>'e'</tt> force les trac&eacute;s en
+          discr&eacute;tisation &eacute;quilibr&eacute;e (standard).
+          Le param&egrave;tre <tt>eq</tt> de <tt>tracerSegment</tt> a la
+          valeur <tt>0</tt>. </dd>
+  </body>
+</html>
