@@ -1,0 +1,34 @@
+/** Fournit les pixels du segment joignant le pixel à un autre en utilisant l'algorithme arithmétique.
+ * @param p Le pixel d'arrivée.
+ * @return La séquence de pixels du segment.
+ */
+@Override
+public Pixel[] tracerSegment(Pixel p) {
+    int dx = p.x() - this.x;
+    int dy = p.y() - this.y;
+
+    int longueur = Math.abs(dx); // Longueur du segment (en pixels horizontaux)
+    Pixel[] pts = new Pixel[longueur + 1]; // Tableau des pixels à retourner
+
+    int r = Math.abs(dx) / 2; // r_ini = DX / 2
+    int x = this.x;
+    int y = this.y;
+    int stepY = dy >= 0 ? 1 : -1; // Sens de progression en y
+
+    for (int i = 0; i <= longueur; i++) {
+        // Ajoute le pixel actuel au tableau
+        pts[i] = new Pixel(x, y);
+
+        // Passe au pixel suivant en x
+        x++;
+        r += Math.abs(dy);
+
+        // Si r dépasse dx, incrémente y et ajuste r
+        if (r >= Math.abs(dx)) {
+            y += stepY;
+            r -= Math.abs(dx);
+        }
+    }
+
+    return pts;
+}
